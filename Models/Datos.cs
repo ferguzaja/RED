@@ -22,11 +22,19 @@ namespace WebServer.Models
             /*
             Se agregan tres entradas de clave-valor a nuestro IDictionary
              */
-             //TODO: Agregar más datos de prueba
+            //TODO: Agregar más datos de prueba
             Usuarios = new Dictionary<int, Usuario>();
             Usuarios.Add(0, new Usuario { ID = 0, Nombre = "Vlad", Apellidos = "Drăculea", Email = "alucard@gmail.com", Password = "123456" });
             Usuarios.Add(1, new Usuario { ID = 1, Nombre = "Dorian", Apellidos = "Gray", Email = "eternalLife@gmail.com", Password = "23435643" });
             Usuarios.Add(2, new Usuario { ID = 2, Nombre = "Jeanne", Apellidos = "d'Arc", Email = "DoncelladeOrleans@gmail.com", Password = "asdf445asd" });
+
+
+
+            Folios = new Dictionary<int, Folio>();
+            Folios.Add(0, new Folio { NumFolio = 100, Monto = (decimal)345 });
+            Folios.Add(0, new Folio { NumFolio = 200, Monto = (decimal)345.32 });
+            Folios.Add(0, new Folio { NumFolio = 300, Monto = (decimal)345.67 });
+
         }
     }
 }
