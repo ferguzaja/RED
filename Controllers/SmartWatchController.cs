@@ -5,12 +5,12 @@ using WebServer.Models;
 namespace WebServer.Controllers
 {
     [Route("api/[controller]")]
-    public class UsuariosController : Controller
+    public class SmartWatchController : Controller
     {
 
         /*
         http://localhost:5000/api/usuarios/:id
-        Obtiene la información del Usuario dado a un Id especificado 
+        Obtiene la información del smartWatch dado a un Id especificado 
          */
          
         [HttpGet("{id}")]
@@ -31,16 +31,16 @@ namespace WebServer.Controllers
 
         [HttpGet]
         public ActionResult Get(){
-            return Ok(Datos.Usuarios);
+            return Ok(Datos.DatosSmartWatch);
         }
         [HttpPost]
-        public ActionResult Post([FromBody]Usuario usuario){
-            if(!this.ModelState.IsValid||usuario==null){
+        public ActionResult Post([FromBody]SmartWatch smartWatch){
+            if(!this.ModelState.IsValid||smartWatch==null){
                 return BadRequest();
             }else{
                 //TODO: hacer tal cosa
-                Datos.Usuarios.Add(Datos.Usuarios.Count,usuario);
-                return Ok(usuario);
+                Datos.DatosSmartWatch.Add(Datos.DatosSmartWatch.Count,smartWatch);
+                return Ok(smartWatch);
                 //TODO: validar aqui
             }
         }

@@ -14,6 +14,7 @@ namespace WebServer {
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()
+                .UseUrls("http://localhost:8080")
                 .Build();
 
             host.Run();

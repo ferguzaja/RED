@@ -16,6 +16,9 @@ namespace WebServer.Models
          */
         public static IDictionary<int, Folio> Folios { get; set; }
 
+        // diccionario de datos del smartwhatch
+        public static IDictionary<int, SmartWatch> DatosSmartWatch { get; set; }
+
         // Constructor de la clase
         static Datos()
         {
@@ -32,8 +35,11 @@ namespace WebServer.Models
 
             Folios = new Dictionary<int, Folio>();
             Folios.Add(0, new Folio { NumFolio = 100, Monto = (decimal)345 });
-            Folios.Add(0, new Folio { NumFolio = 200, Monto = (decimal)345.32 });
-            Folios.Add(0, new Folio { NumFolio = 300, Monto = (decimal)345.67 });
+            Folios.Add(1, new Folio { NumFolio = 200, Monto = (decimal)345.32 });
+            Folios.Add(2, new Folio { NumFolio = 300, Monto = (decimal)345.67 });
+
+            DatosSmartWatch = new Dictionary<int, SmartWatch>();
+            DatosSmartWatch.Add(0,new SmartWatch {tiempo=3600, promedio= 165, fecha ="21/09/18"});
 
         }
     }
