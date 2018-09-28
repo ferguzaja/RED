@@ -18,6 +18,8 @@ namespace WebServer.Models
 
         // diccionario de datos del smartwhatch
         public static IDictionary<int, SmartWatch> DatosSmartWatch { get; set; }
+        // diccionario de datos del email
+        public static IDictionary<int, Email> DatosEmail { get; set; }
 
         // Constructor de la clase
         static Datos()
@@ -40,6 +42,8 @@ namespace WebServer.Models
 
             DatosSmartWatch = new Dictionary<int, SmartWatch>();
             DatosSmartWatch.Add(0,new SmartWatch {tiempo=3600, promedio= 165, fecha ="21/09/18"});
+
+            DatosEmail = new Dictionary<int, Email>();
 
         }
     }
